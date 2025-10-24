@@ -13,11 +13,5 @@ class WeatherRepositoryImpl @Inject constructor(
         lat: Double,
         long: Double
     ): Result<WeatherResponse> =
-        try {
-            val response = service.getWeatherForecast(lat, long, Config.OPENWEATHER_API_KEY)
-            Result.success(response)
-        } catch (e: Exception) {
-            e.printStackTrace()
-            Result.failure(e)
-        }
+        service.getWeatherForecast(lat, long, Config.OPENWEATHER_API_KEY)
 }

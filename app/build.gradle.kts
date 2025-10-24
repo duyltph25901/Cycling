@@ -91,4 +91,8 @@ dependencies {
     implementation(libs.sandwich.retrofit)
     implementation(libs.sandwich)
     implementation(libs.gson)
+    // coil compose
+    implementation(libs.coil.compose)
+    // location
+    implementation(libs.location.services)
 }

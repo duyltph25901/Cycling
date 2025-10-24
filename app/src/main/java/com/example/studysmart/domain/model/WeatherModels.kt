@@ -3,28 +3,28 @@ package com.example.studysmart.domain.model
 import com.google.gson.annotations.SerializedName
 
 data class WeatherResponse(
-    val city: City? = null,
-    val list: List<WeatherItem>? = null,
-    val daily: List<DailyForecast>? = null,
+    val city: City,
+    val list: List<WeatherItem>,
+    val daily: List<DailyForecast>,
 )
 
 data class City(
-    val id: Int? = null,
-    val name: String? = null,
-    val country: String? = null,
-    val coor: Coordinates? = null,
+    val id: Int,
+    val name: String,
+    val country: String,
+    val coor: Coordinates,
 )
 
 data class Coordinates(
-    val lat: Double? = null,
-    val long: Double? = null,
+    val lat: Double,
+    val long: Double,
 )
 
 data class WeatherItem(
     @SerializedName("dt")
-    val date: Long? = null,
-    val main: MainWeather? = null,
-    val weather: List<Weather>? = null,
+    val date: Long,
+    val main: MainWeather,
+    val weather: List<Weather>,
     val wind: Wind,
     @SerializedName("pop")
     val precipitationProbability: Double = 0.0

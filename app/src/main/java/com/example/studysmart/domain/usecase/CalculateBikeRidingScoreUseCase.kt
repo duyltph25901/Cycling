@@ -5,8 +5,9 @@ import com.example.studysmart.domain.model.BikeRidingRecommendation
 import com.example.studysmart.domain.model.BikeRidingScore
 import com.example.studysmart.domain.model.DailyForecast
 import com.example.studysmart.domain.model.Weather
+import javax.inject.Inject
 
-class CalculateBikeRidingScoreUseCase {
+class CalculateBikeRidingScoreUseCase @Inject constructor() {
     operator fun invoke(forecast: DailyForecast): BikeRidingScore {
         val factors = mutableListOf<BikeRidingFactor>()
 
