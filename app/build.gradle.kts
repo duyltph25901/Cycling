@@ -3,7 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.hilt.android)
-    alias(libs.plugins.ksp)
+    alias(libs.plugins.kotlin.kapt)
 }
 
 android {
@@ -67,20 +67,28 @@ dependencies {
 
     // inject
     implementation(libs.hilt.android)
-    ksp(libs.hilt.android.compiler)
-    ksp(libs.hilt.compiler)
+    kapt(libs.hilt.android.compiler)
+    kapt(libs.hilt.compiler)
     implementation(libs.hilt.nav.compose)
     // lifecycle runtime compose
     implementation(libs.lifecycle.runtime.compose)
     // compose destinations
     implementation(libs.compose.destinations.core)
-    ksp(libs.compose.destinations.ksp)
+    kapt(libs.compose.destinations.ksp)
     // room database
     implementation(libs.room.runtime)
     implementation(libs.room.ktx)
-    ksp(libs.room.compiler)
+    kapt(libs.room.compiler)
     // text font
     implementation(libs.text.google.font)
     // desugar
     coreLibraryDesugaring(libs.desugar)
+    // Networking
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.gson)
+    implementation(libs.okhttp)
+    implementation(libs.okhttp.logging.interceptor)
+    implementation(libs.sandwich.retrofit)
+    implementation(libs.sandwich)
+    implementation(libs.gson)
 }

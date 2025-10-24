@@ -11,12 +11,17 @@ composeBom = "2024.09.00"
 
 hilt-android = "2.56.2"
 hilt-compiler = "1.0.0"
-ksp = "2.0.21-1.0.27"
 lifecycle-runtime-compose = "2.7.0-alpha02"
 compose-destinations = "1.9.52"
 room = "2.5.2"
 text-google-font = "1.5.3"
 desugar = "2.0.3"
+
+retrofit = "3.0.0"
+gson = "2.13.1"
+coil = "2.7.0"
+okhttp = "4.12.0"
+sandwich = "2.0.8"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,11 +51,18 @@ room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
 text-google-font = { module = "androidx.compose.ui:ui-text-google-fonts", version.ref = "text-google-font" }
 desugar = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+okhttp-logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okhttp" }
+sandwich = { module = "com.github.skydoves:sandwich", version.ref = "sandwich" }
+sandwich-retrofit = { module = "com.github.skydoves:sandwich-retrofit", version.ref = "sandwich" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt-android"}
-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 
