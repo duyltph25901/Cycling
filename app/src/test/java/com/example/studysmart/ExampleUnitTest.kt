@@ -1,4 +1,4 @@
-package com.example.studysmart
+package com.example.blog.app
 
 import org.junit.Test
 

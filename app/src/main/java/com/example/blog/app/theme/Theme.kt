@@ -1,4 +1,4 @@
-package com.example.studysmart.theme
+package com.example.blog.app.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

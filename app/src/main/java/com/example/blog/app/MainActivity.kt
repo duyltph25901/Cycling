@@ -1,11 +1,10 @@
-package com.example.studysmart
+package com.example.blog.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import com.example.studysmart.presentation.screens.WeatherScreen
-import com.example.studysmart.theme.StudySmartTheme
+import com.example.blog.app.theme.StudySmartTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -15,7 +14,6 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             StudySmartTheme {
-                WeatherScreen()
             }
         }
     }

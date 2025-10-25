@@ -1,7 +1,5 @@
-package com.example.studysmart.di
+package com.example.blog.app.di
 
-import com.example.studysmart.data.network.Config
-import com.example.studysmart.data.network.WeatherApiService
 import com.ramcosta.composedestinations.BuildConfig
 import dagger.Module
 import dagger.Provides
@@ -37,11 +35,11 @@ object NetworkModule {
     fun provideNetworking(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
-            .baseUrl(Config.BASE_URL)
+            .baseUrl("")
             .client(okHttpClient).build()
 
-    @Provides
+    /*@Provides
     @Singleton
     fun provideWeatherService(retrofit: Retrofit) =
-        retrofit.create(WeatherApiService::class.java)
+        retrofit.create(WeatherApiService::class.java)*/
 }

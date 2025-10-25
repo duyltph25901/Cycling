@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.studysmart"
+    namespace = "com.example.blog.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.example.cycling"
+        applicationId = "com.example.blog.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 1

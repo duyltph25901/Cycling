@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Cycling"
+rootProject.name = "BlogApp"
 include(":app")
  
